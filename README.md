@@ -8,8 +8,20 @@ For the frontend part of this project, please visit [React Procurement Managemen
 
 ## Main Features
 
-- CRUD operations for managing suppliers' information and purchasing orders.
-- Monthly tracking and reporting of new supplier additions and purchasing amounts.
+- CRUD Operations: Complete CRUD operations for managing suppliers and purchasing orders (Create, Read, Update, Delete).
+- Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
+- RESTful API Integration: Utilizes RESTful APIs to communicate with the frondend server for seamless data retrieval and management.
+- Clear Separation of Layers: The project follows a structured architecture with distinct layers:
+- **Controller**: Handles incoming requests and delegates processing to the service layer.
+- **Service**: Implements business logic and interacts with the data access layer (mapper).
+- **Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
+- **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
+- **Security Measures**
+
+###Login Verification
+
+- **Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
+- **Token-based Authentication**: Utilized tokens (e.g., JWT) to securely authenticate users during login and maintain session state.
 
 ## Technology Stack
 
@@ -50,3 +62,52 @@ For the frontend part of this project, please visit [React Procurement Managemen
 
 - **Username:** admin
 - **Password:** admin
+
+### MySQL Database Structure
+
+#### Table: `tb_supplier`
+
+- **Description**: Stores supplier information.
+
+| Column Name     | Data Type        | Description                                          |
+|-----------------|------------------|------------------------------------------------------|
+| `id`            | int              | Supplier ID (Primary Key)                            |
+| `supplier_name` | varchar(50)      | Supplier name                                        |
+| `address`       | varchar(100)     | Registered address of the supplier                   |
+| `contact_person`| varchar(20)      | Contact person of the supplier                       |
+| `email`         | varchar(50)      | Email address of the company                         |
+| `comment`       | varchar(100)     | Short comment about the supplier                     |
+| `create_time`   | datetime         | Time of creation of the supplier                    |
+
+#### Table: `tb_order`
+
+- **Description**: Stores purchase orders.
+
+| Column Name       | Data Type        | Description                                          |
+|-------------------|------------------|------------------------------------------------------|
+| `id`              | int              | Order ID (Primary Key)                               |
+| `supplier_id`     | int              | Supplier ID (Foreign Key referencing `tb_supplier`)  |
+| `material_name`   | varchar(100)     | Name of the material                                |
+| `material_quantity`| int             | Quantity of the material ordered                    |
+| `unit`            | varchar(25)      | Unit of measurement                                 |
+| `single_price`    | decimal(24,2)    | Price per unit                                       |
+| `total_price`     | decimal(24,2)    | Total price of the order                             |
+| `create_time`     | datetime         | Time of creation of the order                        |
+| `comment`         | varchar(100)     | Comment about the order                              |
+
+#### Table: `tb_user`
+
+- **Description**: Stores user credentials.
+
+| Column Name | Data Type   | Description                             |
+|-------------|-------------|-----------------------------------------|
+| `username`  | varchar(50) | Username                                |
+| `id`        | int         | User ID (Primary Key)                   |
+| `password`  | varchar(32) | Password (hashed or encrypted)          |
+| `name`      | varchar(50) | User's full name                        |
+
+### Notes
+
+- The database utilizes InnoDB engine with UTF-8 character set (`utf8mb4`).
+- Foreign key constraints are applied between `tb_order` and `tb_supplier` (`tb_order.supplier_id` references `tb_supplier.id`).
+
