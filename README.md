@@ -41,6 +41,12 @@ For the frontend part of this project, please visit [React Procurement Managemen
 - **Database Server:** MySQL 8.0.37
 - **Java Platform:** OpenJDK 22.0.1
 
+## Screenshots
+
+![Screenshot 1](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_home.png)
+![Screenshot 2](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_order_management.png)
+![Screenshot 3](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_supplier_management.png)
+
 ## Getting Started
 
 ### Setting Up the Database
