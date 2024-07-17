@@ -9,13 +9,14 @@ Welcome to the the backend part of Procurement Management System, a project aime
 - Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
 - RESTful API Integration: Utilizes RESTful APIs to communicate with the frondend server for seamless data retrieval and management.
 - Detailed Logging: Utilize SLF4J for detailed logging
-- Clear Separation of Layers: The project follows a structured architecture with distinct layers:
+- Global Exception Handler: Implementes a global exception handler to manage and centralize error handling throughout the application.
+- Clear Separation of Layers: The project follows a structured architecture with distinct layers:\
   <br>**Controller**: Handles incoming requests and delegates processing to the service layer.
   <br>**Service**: Implements business logic and interacts with the data access layer (mapper).
   <br>**Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
   <br> **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
 
-- Login Verification:
+- Login Verification:\
   <br>**Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
   <br>**Token-based Authentication**: Utilized JWT tokens to securely authenticate users during login and maintain session state.
 
