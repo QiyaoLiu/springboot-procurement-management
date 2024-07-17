@@ -1,27 +1,23 @@
 # Procurement Management System
 
-Welcome to the Procurement Management System, a project aimed at facilitating CRUD operations for supplier information and purchasing orders using SpringBoot.
-
-## Frontend Repository
-
-For the frontend part of this project, please visit [React Procurement Management](https://github.com/qiyao-liu/react-procurement-management).
+Welcome to the the backend part of Procurement Management System, a project aimed at facilitating CRUD operations for supplier information and purchasing orders using SpringBoot. For the frontend part of this project, please visit [React Procurement Management](https://github.com/qiyao-liu/react-procurement-management).
 
 ## Main Features
 
 - CRUD Operations: Complete CRUD operations for managing suppliers and purchasing orders (Create, Read, Update, Delete).
 - Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
 - RESTful API Integration: Utilizes RESTful APIs to communicate with the frondend server for seamless data retrieval and management.
+- Detailed Logging: Utilize SLF4J for detailed logging
+- Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
 - Clear Separation of Layers: The project follows a structured architecture with distinct layers:
-- **Controller**: Handles incoming requests and delegates processing to the service layer.
-- **Service**: Implements business logic and interacts with the data access layer (mapper).
-- **Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
-- **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
-- **Security Measures**
+  **Controller**: Handles incoming requests and delegates processing to the service layer.
+  **Service**: Implements business logic and interacts with the data access layer (mapper).
+  **Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
+  **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
 
-###Login Verification
-
-- **Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
-- **Token-based Authentication**: Utilized tokens (e.g., JWT) to securely authenticate users during login and maintain session state.
+- Login Verification:
+  **Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
+  **Token-based Authentication**: Utilized JWT tokens to securely authenticate users during login and maintain session state.
 
 ## Technology Stack
 
@@ -36,16 +32,11 @@ For the frontend part of this project, please visit [React Procurement Managemen
 - **JDK:** JDK 22
 - **Build Tool:** Maven 3.9.6
 
-## Runtime Environment
-
-- **Database Server:** MySQL 8.0.37
-- **Java Platform:** OpenJDK 22.0.1
-
 ## Screenshots
 
 ![Screenshot 1](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_home.png)
-![Screenshot 2](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_order_management.png)
-![Screenshot 3](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_supplier_management.png)
+![Screenshot 2](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_supplier_management.png)
+![Screenshot 3](https://github.com/qiyao-liu/react-procurement-management/blob/main/screenshots/screenshot_order_management.png)
 
 ## Getting Started
 
@@ -109,7 +100,7 @@ For the frontend part of this project, please visit [React Procurement Managemen
 |-------------|-------------|-----------------------------------------|
 | `username`  | varchar(50) | Username                                |
 | `id`        | int         | User ID (Primary Key)                   |
-| `password`  | varchar(32) | Password (hashed or encrypted)          |
+| `password`  | varchar(32) | Password         |
 | `name`      | varchar(50) | User's full name                        |
 
 ### Notes
