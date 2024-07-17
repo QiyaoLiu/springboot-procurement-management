@@ -6,18 +6,18 @@ Welcome to the the backend part of Procurement Management System, a project aime
 
 - CRUD Operations: Complete CRUD operations for managing suppliers and purchasing orders (Create, Read, Update, Delete).
 - Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
+- Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
 - RESTful API Integration: Utilizes RESTful APIs to communicate with the frondend server for seamless data retrieval and management.
 - Detailed Logging: Utilize SLF4J for detailed logging
-- Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
 - Clear Separation of Layers: The project follows a structured architecture with distinct layers:
-  **Controller**: Handles incoming requests and delegates processing to the service layer.
-  **Service**: Implements business logic and interacts with the data access layer (mapper).
-  **Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
-  **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
+  <br>**Controller**: Handles incoming requests and delegates processing to the service layer.
+  <br>**Service**: Implements business logic and interacts with the data access layer (mapper).
+  <br>**Mapper**: Maps database entities to Java objects (POJOs) and vice versa.
+  <br> **POJOs**: Plain old Java objects representing entities and data transfer objects (DTOs).
 
 - Login Verification:
-  **Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
-  **Token-based Authentication**: Utilized JWT tokens to securely authenticate users during login and maintain session state.
+  <br>**Interceptor**: Implemented interceptors to manage authentication and authorization for API requests.
+  <br>**Token-based Authentication**: Utilized JWT tokens to securely authenticate users during login and maintain session state.
 
 ## Technology Stack
 
@@ -66,45 +66,44 @@ Welcome to the the backend part of Procurement Management System, a project aime
 
 - **Description**: Stores supplier information.
 
-| Column Name     | Data Type        | Description                                          |
-|-----------------|------------------|------------------------------------------------------|
-| `id`            | int              | Supplier ID (Primary Key)                            |
-| `supplier_name` | varchar(50)      | Supplier name                                        |
-| `address`       | varchar(100)     | Registered address of the supplier                   |
-| `contact_person`| varchar(20)      | Contact person of the supplier                       |
-| `email`         | varchar(50)      | Email address of the company                         |
-| `comment`       | varchar(100)     | Short comment about the supplier                     |
-| `create_time`   | datetime         | Time of creation of the supplier                    |
+| Column Name      | Data Type    | Description                        |
+| ---------------- | ------------ | ---------------------------------- |
+| `id`             | int          | Supplier ID (Primary Key)          |
+| `supplier_name`  | varchar(50)  | Supplier name                      |
+| `address`        | varchar(100) | Registered address of the supplier |
+| `contact_person` | varchar(20)  | Contact person of the supplier     |
+| `email`          | varchar(50)  | Email address of the company       |
+| `comment`        | varchar(100) | Short comment about the supplier   |
+| `create_time`    | datetime     | Time of creation of the supplier   |
 
 #### Table: `tb_order`
 
 - **Description**: Stores purchase orders.
 
-| Column Name       | Data Type        | Description                                          |
-|-------------------|------------------|------------------------------------------------------|
-| `id`              | int              | Order ID (Primary Key)                               |
-| `supplier_id`     | int              | Supplier ID (Foreign Key referencing `tb_supplier`)  |
-| `material_name`   | varchar(100)     | Name of the material                                |
-| `material_quantity`| int             | Quantity of the material ordered                    |
-| `unit`            | varchar(25)      | Unit of measurement                                 |
-| `single_price`    | decimal(24,2)    | Price per unit                                       |
-| `total_price`     | decimal(24,2)    | Total price of the order                             |
-| `create_time`     | datetime         | Time of creation of the order                        |
-| `comment`         | varchar(100)     | Comment about the order                              |
+| Column Name         | Data Type     | Description                                         |
+| ------------------- | ------------- | --------------------------------------------------- |
+| `id`                | int           | Order ID (Primary Key)                              |
+| `supplier_id`       | int           | Supplier ID (Foreign Key referencing `tb_supplier`) |
+| `material_name`     | varchar(100)  | Name of the material                                |
+| `material_quantity` | int           | Quantity of the material ordered                    |
+| `unit`              | varchar(25)   | Unit of measurement                                 |
+| `single_price`      | decimal(24,2) | Price per unit                                      |
+| `total_price`       | decimal(24,2) | Total price of the order                            |
+| `create_time`       | datetime      | Time of creation of the order                       |
+| `comment`           | varchar(100)  | Comment about the order                             |
 
 #### Table: `tb_user`
 
 - **Description**: Stores user credentials.
 
-| Column Name | Data Type   | Description                             |
-|-------------|-------------|-----------------------------------------|
-| `username`  | varchar(50) | Username                                |
-| `id`        | int         | User ID (Primary Key)                   |
-| `password`  | varchar(32) | Password         |
-| `name`      | varchar(50) | User's full name                        |
+| Column Name | Data Type   | Description           |
+| ----------- | ----------- | --------------------- |
+| `username`  | varchar(50) | Username              |
+| `id`        | int         | User ID (Primary Key) |
+| `password`  | varchar(32) | Password              |
+| `name`      | varchar(50) | User's full name      |
 
 ### Notes
 
 - The database utilizes InnoDB engine with UTF-8 character set (`utf8mb4`).
 - Foreign key constraints are applied between `tb_order` and `tb_supplier` (`tb_order.supplier_id` references `tb_supplier.id`).
-
