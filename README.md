@@ -46,7 +46,7 @@ Welcome to the the backend part of Procurement Management System, a project aime
 ### Setting Up the Database
 
 1. Open your MySQL management tool.
-2. Execute the `db01.sql` script to set up the `db01` database.
+2. Execute the `db01_dump.sql` script to set up the `db01` database.
 
 ### Running the Software
 
