@@ -2,6 +2,7 @@ package com.abctechnologies.procurementmanagementsystem.service;
 
 import com.abctechnologies.procurementmanagementsystem.pojo.PageBean;
 import com.abctechnologies.procurementmanagementsystem.pojo.Supplier;
+import org.springframework.transaction.annotation.Transactional;
 
 public interface SupplierService {
 
@@ -35,6 +36,6 @@ public interface SupplierService {
      *
      * @param id
      */
-    void delete(Integer id);
+    void delete(Integer id) throws Exception;
 
 }

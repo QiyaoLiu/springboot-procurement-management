@@ -6,7 +6,14 @@
 
 
 <mapper namespace="com.abctechnologies.procurementmanagementsystem.mapper.SupplierMapper">
-
+    <select id="list" resultType="com.abctechnologies.procurementmanagementsystem.pojo.Supplier">
+        SELECT * FROM tb_supplier
+        <where>
+            <if test="supplierName != null and supplierName != ''">
+                AND supplier_name like CONCAT('%', #{supplierName}, '%')
+            </if>
+        </where>
+    </select>
     <update id="update">
         update tb_supplier
         <set>
@@ -31,12 +38,5 @@
         </set>
         where id = #{id}
     </update>
-    <select id="list" resultType="com.abctechnologies.procurementmanagementsystem.pojo.Supplier">
-        SELECT * FROM tb_supplier
-        <where>
-            <if test="supplierName != null and supplierName != ''">
-                AND supplier_name like CONCAT('%', #{supplierName}, '%')
-            </if>
-        </where>
-    </select>
+
 </mapper>

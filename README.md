@@ -8,8 +8,10 @@ Welcome to the the backend part of Procurement Management System, a project aime
 - Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
 - Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
 - RESTful API Integration: Utilizes RESTful APIs to communicate with the frondend server for seamless data retrieval and management.
-- Detailed Logging: Utilize SLF4J for detailed logging
-- Global Exception Handler: Implementes a global exception handler to manage and centralize error handling throughout the application.
+- Global Exception Handler: Implementes a global exception handler to manage and centralize error handling
+  throughout the application.
+- Transaction Management: Ensures data integrity and consistency across multiple database operations.
+- Logging: Tracks deletion actions, helps in auditing a history of critical actions
 - Clear Separation of Layers: The project follows a structured architecture with distinct layers:\
   <br>**Controller**: Handles incoming requests and delegates processing to the service layer.
   <br>**Service**: Implements business logic and interacts with the data access layer (mapper).

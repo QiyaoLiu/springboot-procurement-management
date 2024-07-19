@@ -1,5 +1,6 @@
 package com.abctechnologies.procurementmanagementsystem.service;
 
+import com.abctechnologies.procurementmanagementsystem.pojo.Result;
 import com.abctechnologies.procurementmanagementsystem.pojo.User;
 
 
@@ -10,5 +11,5 @@ public interface UserService {
      * @param user
      * @return
      */
-    User login(User user);
+    Result login(User user);
 }

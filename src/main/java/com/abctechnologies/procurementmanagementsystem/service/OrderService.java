@@ -30,5 +30,5 @@ public interface OrderService {
      * delete an order
      * @param id
      */
-    void delete(Integer id);
+    void delete(Integer id) throws Exception;
 }

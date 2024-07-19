@@ -18,6 +18,14 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    /**
+     * get order with pagination
+     * @param materialName
+     * @param supplierName
+     * @param page
+     * @param pageSize
+     * @return
+     */
     @GetMapping
     public Result page(@RequestParam(required = false) String materialName,
                        @RequestParam(required = false) String supplierName,
@@ -30,7 +38,11 @@ public class OrderController {
         return Result.success(pageBean);
     }
 
-
+    /**
+     * add an order
+     * @param order
+     * @return
+     */
     @PostMapping
     public Result add(@RequestBody Order order) {
         log.info("adding an order: {}", order);
@@ -38,7 +50,11 @@ public class OrderController {
         return Result.success();
     }
 
-
+    /**
+     * update an order
+     * @param order
+     * @return
+     */
     @PutMapping
     public Result update(@RequestBody Order order) {
         log.info("updating an order{}", order);
@@ -46,8 +62,14 @@ public class OrderController {
         return Result.success();
     }
 
-    @DeleteMapping("{id}")
-    public Result delete(@PathVariable Integer id) {
+    /**
+     * delete an order
+     * @param id
+     * @return
+     * @throws Exception
+     */
+    @DeleteMapping("/{id}")
+    public Result delete(@PathVariable Integer id) throws Exception {
         log.info("deleting an order by id:{}", id);
         orderService.delete(id);
         return Result.success();

@@ -6,11 +6,7 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface UserMapper {
-    /**
-     * search user by username and password
-     * @param user
-     * @return
-     */
-    @Select("select * from tb_user where username = #{username} and password = #{password}")
-    User getByUsernameAndPassword(User user);
+
+    @Select("select * from tb_user where BINARY username = #{username}")
+    User getByUsername(String username);
 }

@@ -60,7 +60,7 @@ public class SupplierController {
      * @return
      */
     @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id) {
+    public Result delete(@PathVariable Integer id) throws Exception {
         log.info("deleting a supplier by id:{}",id);
         supplierService.delete(id);
         return Result.success();

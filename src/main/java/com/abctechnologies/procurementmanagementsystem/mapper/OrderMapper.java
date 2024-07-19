@@ -25,7 +25,14 @@ public interface OrderMapper {
     void deleteById(Integer id);
 
     /**
-     * add an new order
+     * delete a supplier by supplier id
+     * @param supplierId
+     */
+    @Delete("delete from tb_order where supplier_id = #{supplierId}")
+    void deleteBySupplierId(Integer supplierId);
+
+    /**
+     * add a new order
      * @param order
      */
     @Insert("insert into tb_order(supplier_id, material_name, material_quantity, unit, single_price, total_price, comment, create_time) " +
