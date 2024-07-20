@@ -4,6 +4,7 @@ Welcome to the the backend part of Procurement Management System, a project aime
 
 ## Main Features
 
+- Decoupled Architecture: Separates the frontend and backend for enhanced modularity and scalability
 - CRUD Operations: Complete CRUD operations for managing suppliers and purchasing orders (Create, Read, Update, Delete).
 - Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
 - Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
