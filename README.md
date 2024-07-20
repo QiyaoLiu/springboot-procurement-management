@@ -1,10 +1,10 @@
 # Procurement Management System
 
-Welcome to the the backend part of Procurement Management System, a project aimed at facilitating CRUD operations for supplier information and purchasing orders using SpringBoot. For the frontend part of this project, please visit [React Procurement Management](https://github.com/qiyao-liu/react-procurement-management).
+Welcome to the the backend part of Procurement Management System, a project aimed at facilitating CRUD operations for supplier information and purchasing orders using SpringBoot. 
 
 ## Main Features
 
-- Decoupled Architecture: Separates the frontend and backend for enhanced modularity and scalability
+- Decoupled Architecture: Separates the frontend and backend for enhanced modularity and scalability. For the frontend part of this project, please visit [React Procurement Management](https://github.com/qiyao-liu/react-procurement-management).
 - CRUD Operations: Complete CRUD operations for managing suppliers and purchasing orders (Create, Read, Update, Delete).
 - Dashboard Insights: Provides insights into monthly activities related to suppliers and orders.
 - Pagination and Filtering: Implement pagination, filtering, and sorting for endpoints that return lists of suppliers or orders to handle large datasets efficiently.
