@@ -38,9 +38,11 @@ Welcome to the the backend part of Procurement Management System, a project aime
 
 ## Screenshots
 
-![Screenshot 1](https://github.com/qiyao-liu/springboot-procurement-management/blob/main/screenshots/screenshot_home.png)
-![Screenshot 2](https://github.com/qiyao-liu/springboot-procurement-management/blob/main/screenshots/screenshot_supplier_management.png)
-![Screenshot 3](https://github.com/qiyao-liu/springboot-procurement-management/blob/main/screenshots/screenshot_order_management.png)
+![Screenshot 1](https://github.com/QiyaoLiu/springboot-procurement-management/blob/main/screenshots/screenshot_login.png)
+![Screenshot 2](https://github.com/QiyaoLiu/springboot-procurement-management/blob/main/screenshots/screenshot_home.png)
+![Screenshot 3](https://github.com/QiyaoLiu/springboot-procurement-management/blob/main/screenshots/screenshot_supplier_management.png)
+![Screenshot 4]https://github.com/QiyaoLiu/springboot-procurement-management/blob/main/screenshots/screenshot_order_management.png
+
 
 ## Getting Started
 
